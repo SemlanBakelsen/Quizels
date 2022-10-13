@@ -34,6 +34,10 @@ h1 {
     margin: 5px auto;
 }
 
+.score {
+    margin: -5px auto;
+}
+
 /* different screen sizes */
 @media (max-width: 950px) {
     h1 {
