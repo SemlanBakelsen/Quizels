@@ -16,7 +16,7 @@ function startQuiz() {
     document.getElementById('c3').textContent = "Shanghai Tower";
     document.getElementById('c4').textContent = "One World Trade Center";
 
-    document.getElementById("aid").textContent = 0;
+    document.getElementById("aid").textContent = "0";
 
     for (let button of buttons) {
         button.addEventListener("click", function(){
