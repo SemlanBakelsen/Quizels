@@ -49,23 +49,29 @@ function setupQuestion(questionText, options) {
 }
 
 function Answer() {
-    const correctAnswers = [];
+    const correctAnswers = [
+        [false, true, false, false], //correct answer for question 1: button 2
+        [true, false, false, false], //correct answer for question 1: button 1
+        [false, false, true, false] //correct answer for question 1: button 3
+    ];
 
+    //will be set to the button pressed by the user
     const selectedAnswerIndex = Array.from(document.querySelectorAll('.btn')).indexOf(this);
 
+    //adds to the score if the button clicked matches the correct answer Array
     if (correctAnswers[questionCounter - 1][selectedAnswerIndex]) {
-        //add score
+        scoreAdd();
     }
 
     //go to next question
     if () {
-        //question 2
+        quizQ2();
     }
     else if () {
-        //question 3
+        quizQ3();
     }
     else if () {
-        //end
+        end();
     }
 
 }
@@ -136,6 +142,6 @@ function end() {
 }
 
 function scoreAdd() {
-    let oldScore = parseInt(document.getElementById("aid").textContent);
-    document.getElementById("aid").textContent = oldScore + 1;
+    score++;
+    document.getElementById("aid").textContent = score;
 }
