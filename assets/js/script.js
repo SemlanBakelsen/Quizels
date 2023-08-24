@@ -4,20 +4,18 @@ document.addEventListener("DOMContentLoaded", function() {
 
 })
 
+//set score to a base value
+let score = 0;
+
 /**
  * starts the quiz
  */
 function startQuiz() {
     let buttons = document.getElementsByTagName("button");
-    document.getElementById('qid').textContent = "What is the worlds tallest building?";
-
-    document.getElementById('c1').textContent = "Merdeka 118";
-    document.getElementById('c2').textContent = "Burj Khalifa";
-    document.getElementById('c3').textContent = "Shanghai Tower";
-    document.getElementById('c4').textContent = "One World Trade Center";
 
     document.getElementById("aid").textContent = "0";
 
+    setupQuestion("What is the worlds tallest building?", ["Merdeka 118", "Burj Khalifa", "Shanghai Tower", "One World Trade Center"]);
     for (let button of buttons) {
         button.addEventListener("click", function(){
             if (this.getAttribute("id") === "c1"){
@@ -36,17 +34,25 @@ function startQuiz() {
     }
 }
 
+//sets the first questions
+function setupQuestion(questionText, options) {
+    let buttons = document.getElementsByTagName("button");
+    document.getElementById('qid').textContent = questionText;
+
+    //Will set the text of the questions looping thru the elements
+    for (let i=0; i < buttons.length; i++) {
+        buttons[i].textContent = options[i];
+    }
+
+}
+
 /**
- * runs the secound question
+ * runs the second question
  */
 function quizQ2() {
     let buttons = document.getElementsByTagName("button");
-    document.getElementById('qid').textContent = "What is the worlds biggest lake?";
 
-    document.getElementById('c1').textContent = "Caspian Sea";
-    document.getElementById('c2').textContent = "Victoria Lake";
-    document.getElementById('c3').textContent = "Michigan Lake";
-    document.getElementById('c4').textContent = "Baikal Lake";
+    setupQuestion("What is the worlds biggest lake?", ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"]);
 
     for (let button of buttons) {
         button.addEventListener("click", function(){
@@ -71,12 +77,8 @@ function quizQ2() {
  */
 function quizQ3() {
     let buttons = document.getElementsByTagName("button");
-    document.getElementById('qid').textContent = "What is the worlds biggest city by population?";
 
-    document.getElementById('c1').textContent = "Delhi";
-    document.getElementById('c2').textContent = "Mexico City";
-    document.getElementById('c3').textContent = "Tokyo";
-    document.getElementById('c4').textContent = "Cairo";
+    setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"])
 
     for (let button of buttons) {
         button.addEventListener("click", function(){
