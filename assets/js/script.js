@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", function() {
 //set score to a base value
 let score = 0;
 
+//keeps track of the current question
+let questionCounter = 0;
+
 /**
  * starts the quiz
  */
@@ -42,6 +45,27 @@ function setupQuestion(questionText, options) {
     //Will set the text of the questions looping thru the elements
     for (let i=0; i < buttons.length; i++) {
         buttons[i].textContent = options[i];
+    }
+}
+
+function Answer() {
+    const correctAnswers = [];
+
+    const selectedAnswerIndex = Array.from(document.querySelectorAll('.btn')).indexOf(this);
+
+    if (correctAnswers[questionCounter - 1][selectedAnswerIndex]) {
+        //add score
+    }
+
+    //go to next question
+    if () {
+        //question 2
+    }
+    else if () {
+        //question 3
+    }
+    else if () {
+        //end
     }
 
 }
