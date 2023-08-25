@@ -8,6 +8,7 @@ h1 {
     margin: auto;
     width: 33vw;
     font-size: 300%;
+    text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.8);
 }
 
 /* quiz background */
