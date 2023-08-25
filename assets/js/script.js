@@ -20,20 +20,7 @@ function startQuiz() {
 
     setupQuestion("What is the worlds tallest building?", ["Merdeka 118", "Burj Khalifa", "Shanghai Tower", "One World Trade Center"]);
     for (let button of buttons) {
-        button.addEventListener("click", function(){
-            if (this.getAttribute("id") === "c1"){
-                quizQ2();
-            } else if (this.getAttribute("id") === "c2"){
-                
-                scoreAdd();
-                
-                quizQ2();//correct answer
-            } else if (this.getAttribute("id") === "c3"){
-                quizQ2();
-            } else {
-                quizQ2();
-            }
-        })
+        button.addEventListener("click", Answer);
     }
 }
 
@@ -64,13 +51,13 @@ function Answer() {
     }
 
     //go to next question
-    if () {
-        quizQ2();
+    if (questionCounter === 1) {
+        quizQ2  ();
     }
-    else if () {
+    else if (questionCounter === 2) {
         quizQ3();
     }
-    else if () {
+    else if (questionCounter === 3) {
         end();
     }
 
@@ -80,52 +67,16 @@ function Answer() {
  * runs the second question
  */
 function quizQ2() {
-    let buttons = document.getElementsByTagName("button");
-
+    questionCounter++;
     setupQuestion("What is the worlds biggest lake?", ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"]);
-
-    for (let button of buttons) {
-        button.addEventListener("click", function(){
-            if (this.getAttribute("id") === "c1"){
-                
-                scoreAdd();
-                
-                quizQ3();//correct answer
-            } else if (this.getAttribute("id") === "c2"){
-                quizQ3();
-            } else if (this.getAttribute("id") === "c3"){
-                quizQ3();
-            } else {
-                quizQ3();
-            }
-        })
-    }
 }
 
 /**
  * starts third question
  */
 function quizQ3() {
-    let buttons = document.getElementsByTagName("button");
-
-    setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"])
-
-    for (let button of buttons) {
-        button.addEventListener("click", function(){
-            if (this.getAttribute("id") === "c1"){
-                end();
-            } else if (this.getAttribute("id") === "c2"){
-                end();
-            } else if (this.getAttribute("id") === "c3"){
-                
-                scoreAdd();
-                
-                end();//correct answer
-            } else {
-                end();
-            }
-        })
-    }
+questionCounter++;
+    setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"]);
 }
 
 /**
@@ -133,14 +84,18 @@ function quizQ3() {
  */
 function end() {
     document.getElementById('qid').textContent = "You have completed the quiz";
-
-    document.getElementById('c1').textContent = "";
-    document.getElementById('c2').textContent = "";
-    document.getElementById('c3').textContent = "";
-    document.getElementById('c4').textContent = "";
-
+    clearOptions();
 }
 
+//will set all option buttons text to ""
+function clearOptions() {
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+        button.textContent = "";
+    }
+}
+
+//increases the score
 function scoreAdd() {
     score++;
     document.getElementById("aid").textContent = score;
