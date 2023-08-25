@@ -31,6 +31,31 @@ const questions = [
         question: "What is the world's longest mountain range?",
         options: ["Andes", "Rocky Mountains", "Great Dividing Range", "Mid-Ocean Ridge"],
         correctIndex: 3
+    },
+    {
+        question: "What is the tallest living species of tree on Earth?",
+        options: ["Giant Sequoia", "Douglas Fir", "Sitka Spruce", "Coast Redwood"],
+        correctIndex: 3
+    },
+    {
+        question: "Which plant is known to have the largest leaves in the world?",
+        options: ["Banana Plant", "Elephant Ear Plant", "Giant Water Lily", "Fern"],
+        correctIndex: 0
+    },
+    {
+        question: "Which desert holds the title for being the largest hot desert in the world?",
+        options: ["Mojave Desert", "Sahara Desert", "Gobi Desert", "Arabian Desert"],
+        correctIndex: 1
+    },
+    {
+        question: "Which continent is home to the largest rainforest in the world?",
+        options: ["Africa", "Asia", "South America", "Australia"],
+        correctIndex: 2
+    },
+    {
+        question: "Which plateau is considered the largest in terms of area?",
+        options: ["Colorado Plateau", "Deccan Plateau", "Tibetan Plateau", "Columbia Plateau"],
+        correctIndex: 1
     }
     ];
 
