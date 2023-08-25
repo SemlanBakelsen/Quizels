@@ -1,7 +1,10 @@
 # Quizels World Quiz
 Quizels is a website with a simple quiz that asks questions about big things in the world.
 ## Responsive design
-The website has been tested and built to be responsive for multiple screen sizes. The page was testing using Lighthouse with an accessibility score of 97.
+The website has been tested and built to be responsive for multiple screen sizes. The page was testing using Lighthouse with an accessibility score of 100.
+
+![Lighthouse test results](assets/images/Lighthouse_quizels.png)
+
 ## Bugs
 - The score falsely adds a point on the second answer of the second question.
 - It also adds a point falsely on the second option of question three.
