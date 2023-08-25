@@ -56,6 +56,11 @@ const questions = [
         question: "Which plateau is considered the largest in terms of area?",
         options: ["Colorado Plateau", "Deccan Plateau", "Tibetan Plateau", "Columbia Plateau"],
         correctIndex: 1
+    },
+    {
+        question: "Which river is the longest in the world?",
+        options: ["Amazon River", "Yangtze River", "Mississippi River", "Nile River"],
+        correctIndex: 3
     }
     ];
 
