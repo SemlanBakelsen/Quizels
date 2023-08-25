@@ -6,7 +6,7 @@ The website has been tested and built to be responsive for multiple screen sizes
 - The score falsely adds a point on the second answer of the second question.
 - It also adds a point falsely on the second option of question three.
 - There's a false addition of two points on option 1.
-    * This was fixed by only adding the event listener to the buttons once
+    * These instances were fixed by only adding the event listener to the buttons once.
 
 ## Credit
 Made use of [W3Schools](https://www.w3schools.com/js/) and their JavaScript tutorials for inspiration and code snippets.
