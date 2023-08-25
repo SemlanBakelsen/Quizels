@@ -26,6 +26,11 @@ const questions = [
         question: "What is the world's biggest city by population?",
         options: ["Delhi", "Mexico City", "Tokyo", "Cairo"],
         correctIndex: 2
+    },
+    {
+        question: "What is the world's longest mountain range?",
+        options: ["Andes", "Rocky Mountains", "Great Dividing Range", "Mid-Ocean Ridge"],
+        correctIndex: 3
     }
     ];
 
