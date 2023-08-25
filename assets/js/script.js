@@ -27,6 +27,7 @@ const questions = [
         options: ["Delhi", "Mexico City", "Tokyo", "Cairo"],
         correctIndex: 2
     }
+    ];
 
 /**
  * starts the quiz
@@ -66,14 +67,12 @@ function Answer() {
 
     questionCounter++;
 
-    //go to next question
+    //setup the next questions
     if (questionCounter < questions.length) {
-            setupQuestion(questions[questionCounter]);
-    }
-    else if (questionCounter === 3) {
+        setupQuestion(questions[questionCounter]);
+    } else {
         end();
     }
-
 }
 
 /**
@@ -81,7 +80,6 @@ function Answer() {
  */
 function quizQ2() {
     //setupQuestion("What is the worlds biggest lake?", ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"]);
-    setupQuestion(questions[questionCounter]);
 }
 
 /**
@@ -89,7 +87,6 @@ function quizQ2() {
  */
 function quizQ3() {
     //setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"]);
-    setupQuestion(questions[questionCounter]);
 }
 
 /**
