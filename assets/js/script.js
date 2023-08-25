@@ -31,6 +31,7 @@ const questions = [
 
 /**
  * starts the quiz
+ * adds eventListener to the buttons, and running Answer function on clicking the buttons
  */
 function startQuiz() {
     let buttons = document.getElementsByTagName("button");
@@ -43,7 +44,7 @@ function startQuiz() {
     }
 }
 
-//sets the first questions
+//sets up the questions, title and button text
 function setupQuestion(currentQuestion) {
     let buttons = document.getElementsByTagName("button");
     document.getElementById('qid').textContent = currentQuestion.question;
@@ -54,6 +55,8 @@ function setupQuestion(currentQuestion) {
     }
 }
 
+
+//function to determine if the user clicked on the correct answer, if they did run teh scoreAdd function
 function Answer() {
     const currentQuestion = questions[questionCounter];
 
@@ -76,7 +79,7 @@ function Answer() {
 }
 
 /**
- * end of quiz, displays the total score
+ * end of quiz
  */
 function end() {
     document.getElementById('qid').textContent = "You have completed the quiz";
