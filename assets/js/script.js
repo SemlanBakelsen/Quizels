@@ -76,20 +76,6 @@ function Answer() {
 }
 
 /**
- * runs the second question
- */
-function quizQ2() {
-    //setupQuestion("What is the worlds biggest lake?", ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"]);
-}
-
-/**
- * starts third question
- */
-function quizQ3() {
-    //setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"]);
-}
-
-/**
  * end of quiz, displays the total score
  */
 function end() {
