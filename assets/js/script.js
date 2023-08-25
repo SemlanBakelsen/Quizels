@@ -10,6 +10,24 @@ let score = 0;
 //keeps track of the current question
 let questionCounter = 0;
 
+//all questions, options, and its answers
+const questions = [
+    {
+        question: "What is the world's tallest building?",
+        options: ["Merdeka 118", "Burj Khalifa", "Shanghai Tower", "One World Trade Center"],
+        correctIndex: 1
+    },
+    {
+        question: "What is the world's biggest lake?",
+        options: ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"],
+        correctIndex: 0
+    },
+    {
+        question: "What is the world's biggest city by population?",
+        options: ["Delhi", "Mexico City", "Tokyo", "Cairo"],
+        correctIndex: 2
+    }
+
 /**
  * starts the quiz
  */
@@ -17,45 +35,40 @@ function startQuiz() {
     let buttons = document.getElementsByTagName("button");
 
     document.getElementById("aid").textContent = "0";
+    setupQuestion(questions[questionCounter]);
 
-    setupQuestion("What is the worlds tallest building?", ["Merdeka 118", "Burj Khalifa", "Shanghai Tower", "One World Trade Center"]);
     for (let button of buttons) {
         button.addEventListener("click", Answer);
     }
 }
 
 //sets the first questions
-function setupQuestion(questionText, options) {
+function setupQuestion(currentQuestion) {
     let buttons = document.getElementsByTagName("button");
-    document.getElementById('qid').textContent = questionText;
+    document.getElementById('qid').textContent = currentQuestion.question;
 
     //Will set the text of the questions looping thru the elements
-    for (let i=0; i < buttons.length; i++) {
-        buttons[i].textContent = options[i];
+    for (let i = 0; i < buttons.length; i++) {
+         buttons[i].textContent = currentQuestion.options[i];
     }
 }
 
 function Answer() {
-    const correctAnswers = [
-        [false, true, false, false], //correct answer for question 1: button 2
-        [true, false, false, false], //correct answer for question 1: button 1
-        [false, false, true, false] //correct answer for question 1: button 3
-    ];
+    const currentQuestion = questions[questionCounter];
 
     //will be set to the button pressed by the user
     const selectedAnswerIndex = Array.from(document.querySelectorAll('.btn')).indexOf(this);
 
     //adds to the score if the button clicked matches the correct answer Array
-    if (correctAnswers[questionCounter - 1][selectedAnswerIndex]) {
+    if (selectedAnswerIndex === currentQuestion.correctIndex) {
         scoreAdd();
     }
 
+    questionCounter++;
+
     //go to next question
-    if (questionCounter === 1) {
-        quizQ2  ();
-    }
-    else if (questionCounter === 2) {
-        quizQ3();
+    if (questionCounter < questions.length) {
+            setupQuestion(questions[questionCounter]);
     }
     else if (questionCounter === 3) {
         end();
@@ -67,16 +80,16 @@ function Answer() {
  * runs the second question
  */
 function quizQ2() {
-    questionCounter++;
-    setupQuestion("What is the worlds biggest lake?", ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"]);
+    //setupQuestion("What is the worlds biggest lake?", ["Caspian Sea", "Victoria Lake", "Michigan Lake", "Baikal Lake"]);
+    setupQuestion(questions[questionCounter]);
 }
 
 /**
  * starts third question
  */
 function quizQ3() {
-questionCounter++;
-    setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"]);
+    //setupQuestion("What is the worlds biggest city by population?", ["Delhi", "Mexico City", "Tokyo", "Cairo"]);
+    setupQuestion(questions[questionCounter]);
 }
 
 /**
