@@ -77,6 +77,8 @@ function startQuiz() {
     for (let button of buttons) {
         button.addEventListener("click", Answer);
     }
+
+    document.getElementsByClassName("score")[0].textContent = "Score:";
 }
 
 //sets up the questions, title and button text
@@ -117,8 +119,10 @@ function Answer() {
  * end of quiz
  */
 function end() {
-    document.getElementById('qid').textContent = "You have completed the quiz";
+    document.getElementById('qid').textContent = "You have completed the quiz!";
     clearOptions();
+    document.getElementById("aid").textContent = score + " / 10";
+    document.getElementsByClassName("score")[0].textContent = "Total score:";
 }
 
 //will set all option buttons text to ""
