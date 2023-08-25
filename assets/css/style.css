@@ -7,6 +7,7 @@ h1 {
     border: 1px solid #000;
     margin: auto;
     width: 33vw;
+    font-size: 300%;
 }
 
 /* quiz background */
@@ -42,6 +43,7 @@ h1 {
 @media (max-width: 950px) {
     h1 {
         width: 50vw;
+        font-size: 250%;
     }
     .quiz-area {
         width: 50vw;
@@ -54,5 +56,49 @@ h1 {
     }
     .quiz-area {
         width: 70vw ;
+    }
+}
+
+@media (max-width: 300px) {
+    h1 {
+        width: 80vw;
+        font-size: 175%;
+    }
+    .quiz-area {
+        width: 80vw ;
+    }
+}
+
+@media (max-width: 250px) {
+    h1 {
+        width: 90vw;
+    }
+    .quiz-area {
+        width: 90vw ;
+    }
+    .btn {
+        font-size: 80%;
+    }
+    p {
+        font-size: 80%;
+    }
+    .buttons {
+        padding: 0px;
+    }
+}
+
+@media (max-width: 200px) {
+    h1 {
+        width: 90vw;
+        font-size: 150%;
+    }
+    .quiz-area {
+        width: 90vw ;
+    }
+    .btn {
+        font-size: 60%;
+    }
+    p {
+        font-size: 60%;
     }
 }
