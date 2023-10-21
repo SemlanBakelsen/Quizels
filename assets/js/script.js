@@ -138,3 +138,9 @@ function scoreAdd() {
     score++;
     document.getElementById("aid").textContent = score;
 }
+
+//
+function restartQuiz() {
+
+
+}
