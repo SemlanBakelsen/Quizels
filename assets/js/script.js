@@ -129,7 +129,7 @@ function end() {
     document.getElementsByClassName("score")[0].textContent = "Total score:";
 
     //remove text for what question is displayed
-    document.getElementById('qhid').textContent = " ";
+    document.getElementById('qhid').textContent = "";
 
     //removing the event listener for the buttons
     let buttons = document.getElementsByTagName("button");
