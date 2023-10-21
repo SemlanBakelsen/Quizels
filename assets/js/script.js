@@ -128,6 +128,9 @@ function end() {
     document.getElementById("aid").textContent = score + " / 10";
     document.getElementsByClassName("score")[0].textContent = "Total score:";
 
+    //remove text for what question is displayed
+    document.getElementById('qhid').textContent = " ";
+
     //removing the event listener for the buttons
     let buttons = document.getElementsByTagName("button");
     for (let button of buttons) {
@@ -137,6 +140,7 @@ function end() {
     //Add a new event listener to the first button
     let restartButton = document.getElementById("c1");
     restartButton.addEventListener("click", restartQuiz);
+
 
     //add text to the reset button
     document.getElementById("c1").textContent = "Click to retake quiz.";
@@ -166,9 +170,6 @@ function restartQuiz() {
     //remove eventListener of restart button
     let restartBtn = document.getElementById("c1");
     restartBtn.removeEventListener("click", restartQuiz);
-
-    //remove text for what question is displayed
-    document.getElementById('qhid').textContent = "";
 
     //restart quiz
     startQuiz();
