@@ -159,10 +159,18 @@ function scoreAdd() {
 
 //reset the question counter and reset the quiz
 function restartQuiz() {
+    //reset values
     score = 0;
     questionCounter = 0;
+
+    //remove eventListener of restart button
     let restartBtn = document.getElementById("c1");
     restartBtn.removeEventListener("click", restartQuiz);
+
+    //remove text for what question is displayed
+    document.getElementById('qhid').textContent = "";
+
+    //restart quiz
     startQuiz();
 
 }
