@@ -135,6 +135,8 @@ function end() {
     let restartButton = getElementById("c1");
     restartButton.addEventListener("click", restartQuiz);
 
+    //add text to the reset button
+    document.getElementById("c1").textContent = "Click to retake quiz.";
 
 }
 
