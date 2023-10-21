@@ -154,8 +154,11 @@ function scoreAdd() {
     document.getElementById("aid").textContent = score;
 }
 
-//
+//reset the question counter and reset the quiz
 function restartQuiz() {
-
+    questionCounter = 0;
+    let restartBtn = document.getElementById("c1");
+    restartBtn.removeEventListener("click", restartQuiz);
+    startQuiz();
 
 }
