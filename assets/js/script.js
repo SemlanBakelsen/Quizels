@@ -135,6 +135,7 @@ function end() {
     let restartButton = getElementById("c1");
     restartButton.addEventListener("click", restartQuiz);
 
+
 }
 
 //will set all option buttons text to ""
