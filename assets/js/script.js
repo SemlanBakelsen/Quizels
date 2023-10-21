@@ -132,7 +132,7 @@ function end() {
     }
 
     //Add a new event listener to the first button
-    let restartButton = getElementById("c1");
+    let restartButton = document.getElementById("c1");
     restartButton.addEventListener("click", restartQuiz);
 
     //add text to the reset button
