@@ -21,6 +21,12 @@ The content are centered and the buttons have a padding that it doesn't fill the
 
 ![Quiz Section](assets/images/Quizels_question_btn_score.png)
 
+## Technologies Used
+
+- HTML
+- CSS
+- JavaScript
+
 ## Issues
 
 ### Bugs (Resolved)
