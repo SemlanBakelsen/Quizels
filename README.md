@@ -5,6 +5,20 @@ The website has been tested and built to be responsive for multiple screen sizes
 
 ![Lighthouse test results](assets/images/Lighthouse_quizels.png)
 
+## Features
+
+### Header
+The header has big text and contrasting color to stand out and easy to read. The header is always on top and will automatically fill its place to fit any screen size.
+The text has a drop shadow, so that it doesn't blend with the background.
+
+![Quizels header](assets/images/Quizels_Header.png)
+
+### Quiz Section
+The quiz body consists of three parts: the Question, the answer, the score.
+The quiz body have one unified background color contained in a single border.
+Making it clear that the three parts are related.
+The content are centered and the buttons have a padding that it doesn't fill the entire width.
+
 
 ## Issues
 
@@ -15,7 +29,7 @@ The website has been tested and built to be responsive for multiple screen sizes
     * These instances were fixed by only adding the event listener to the buttons once.
 
 ### Console errors
-console errors would appear when clicking buttons at the end of the quiz. This was resolved by removing the event listeners for the buttons.
+Console errors would appear when clicking buttons at the end of the quiz. This was resolved by removing the event listeners for the buttons.
 
 During implementation of the retake quiz button at the end, there would appear console errors when clicking the retake quiz button.
 This was resolved by adding the event listener to the button at the correct place, previously it was placed in a function that activated when the button was pressed.
