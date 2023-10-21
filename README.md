@@ -1,5 +1,5 @@
 # Quizels World Quiz
-Quizels is a website with a simple quiz that asks questions about big things in the world.
+Quizels is a website with a quiz that asks questions about big things in the world.
 ## Responsive design
 The website has been tested and built to be responsive for multiple screen sizes. The page was testing using Lighthouse with an accessibility score of 100.
 
@@ -17,7 +17,8 @@ The website has been tested and built to be responsive for multiple screen sizes
 ### Console errors
 console errors would appear when clicking buttons at the end of the quiz. This was resolved by removing the event listeners for the buttons.
 
-
+During implementation of the retake quiz button at the end, there would appear console errors when clicking the retake quiz button.
+This was resolved by adding the event listener to the button at the correct place, previously it was placed in a function that activated when the button was pressed.
 
 ## Credit
 Made use of [W3Schools](https://www.w3schools.com/js/) and their JavaScript tutorials for inspiration and code snippets.  
@@ -25,3 +26,5 @@ A few tutorials used where:
 - [JavaScript Functions](https://www.w3schools.com/js/js_functions.asp)
 - [JavaScript Arrays](https://www.w3schools.com/js/js_arrays.asp)
 - [JavaScript For Loop](https://www.w3schools.com/js/js_loop_for.asp)
+
+The favicon image uses the [dummyimage](https://dummyimage.com) website to create a simple image.
