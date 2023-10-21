@@ -84,6 +84,9 @@ function startQuiz() {
 //sets up the questions, title and button text
 function setupQuestion(currentQuestion) {
     let buttons = document.getElementsByTagName("button");
+
+    //Sets text to display Question 1 etc, above the question
+    document.getElementById('qhid').textContent = "Question " + (questionCounter + 1) + ":";
     document.getElementById('qid').textContent = currentQuestion.question;
 
     //Will set the text of the questions looping thru the elements
