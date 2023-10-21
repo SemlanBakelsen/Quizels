@@ -5,6 +5,10 @@ The website has been tested and built to be responsive for multiple screen sizes
 
 ![Lighthouse test results](assets/images/Lighthouse_quizels.png)
 
+Here is the look on how responsive the website is using the tool on the [Am I Responsive](https://ui.dev/amiresponsive) website.
+
+![Responsive Image](assets/images/Responsive.png)
+
 ## Features
 
 ### Header
@@ -18,10 +22,11 @@ The quiz body consists of three parts: the Question, the answer, the score.
 The quiz body have one unified background color contained in a single border.
 Making it clear that the three parts are related.
 The content are centered and the buttons have a padding that it doesn't fill the entire width.
+The background also has a slight gray color, so it isn't as harsh on the users eyes.
 
 ![Quiz Section](assets/images/Quizels_question_btn_score.png)
 
-## Technologies Used
+### Technologies Used
 
 - HTML
 - CSS
