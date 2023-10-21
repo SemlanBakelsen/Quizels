@@ -117,12 +117,24 @@ function Answer() {
 
 /**
  * end of quiz
+ * remove event listener of buttons and add reset button
  */
 function end() {
     document.getElementById('qid').textContent = "You have completed the quiz!";
     clearOptions();
     document.getElementById("aid").textContent = score + " / 10";
     document.getElementsByClassName("score")[0].textContent = "Total score:";
+
+    //removing the event listener for the buttons
+    let buttons = document.getElementsByTagName("button");
+    for (let button of buttons) {
+        button.removeEventListener("click", Answer);
+    }
+
+    //Add a new event listener to the first button
+    let restartButton = getElementById("c1");
+    restartButton.addEventListener("click", restartQuiz);
+
 }
 
 //will set all option buttons text to ""
