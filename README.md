@@ -19,6 +19,7 @@ The quiz body have one unified background color contained in a single border.
 Making it clear that the three parts are related.
 The content are centered and the buttons have a padding that it doesn't fill the entire width.
 
+![Quiz Section](assets/images/Quizels_question_btn_score.png)
 
 ## Issues
 
